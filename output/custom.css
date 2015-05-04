@@ -1,0 +1,64 @@
+/* Esconde o conteúdo até altura 100px */
+div.body {
+    height: 185px;
+    overflow: hidden;
+    transition: 2.0s;
+}
+
+/* Quando o mouse passar sobre o conteúdo, expande com transição */
+/* div.body:hover {
+   height: auto;
+   transition: 0.3s;
+} */
+
+/* Pode usar elemento :focus para quando houver tabulação ou alguns outros eventos */
+
+body{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #555;
+  background:rgba(0,0,0,0.02);
+  padding-top: 70px;
+}
+
+.content{
+  padding: 10px 20px;
+}
+
+section.posts{
+}
+
+h1{
+  font-size:26px;
+  padding-bottom:5px;
+}
+
+.post{
+  background-color: #fff;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.03);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.post .avatar{
+  margin-top: 20px;
+  text-align: center;
+}
+.post .avatar img{
+  width: 96px;
+  height: 96px;
+}
+.post .metadata{
+  text-align: center;
+  color:#999;
+  margin-top: 5px;
+}
+.post .metadata .date{
+  font-size: 24px;
+}
+.post p{
+  text-align: justify;
+  font-size:16px;
+  line-height: 1.5;
+}
+.post .social{
+  text-align: right;
+}

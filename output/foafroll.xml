@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:rss="http://purl.org/rss/1.0/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+<foaf:Group>
+	<foaf:name>DevOps Brasil</foaf:name>
+	<foaf:homepage>devops-br.org</foaf:homepage>
+	<rdfs:seeAlso rdf:resource="devops-br.org/foafroll.xml" />
+
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Gomex</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://techfree.com.br">
+					<dc:title>Tecnologia Livre » DevOps</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://techfree.com.br/category/devops/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Matheus Andrade</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://webcomfarinha.com/blog">
+					<dc:title>WEB COM FARINHA » Git</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://webcomfarinha.com/blog/category/git-2/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+
+</foaf:Group>
+</rdf:RDF>

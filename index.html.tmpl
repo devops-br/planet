@@ -1,0 +1,106 @@
+	<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="DevOps Brasil">
+    <meta name="author" content="Rafael Gomes">
+    <link rel="icon" href="favicon.ico">
+
+    <TMPL_IF feedtype>
+      <link rel="alternate" href="<TMPL_VAR feed ESCAPE="HTML">" title="<TMPL_VAR channel_title_plain ESCAPE="HTML">" type="application/<TMPL_VAR feedtype>+xml">
+    </TMPL_IF>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="custom.css">
+
+    <!--[if lt IE]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>DevOps Brasil</title>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header class="">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Mobile</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><TMPL_VAR name></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="devops.html">O que é DevOps?</a></li>
+                <li><a href="adiciona.html">Adicionar meu Blog</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!--/.container-fluid -->
+        </nav>
+      </header>
+
+
+      <section class="posts col-md-10 col-md-offset-1">
+
+      <TMPL_LOOP Items>
+    		<article class="row post">
+    		  <div class="col-md-2">
+    		    <div class="avatar">
+    		      <img class="img-responsive img-rounded center-block" src="images/<TMPL_VAR channel_face ESCAPE="HTML">" width="<TMPL_VAR channel_facewidth ESCAPE="HTML">" height="<TMPL_VAR channel_faceheight ESCAPE="HTML">" alt="" />
+    		    </div>
+    		    <div class="metadata">
+    		      <span class="date"><TMPL_VAR new_date></span><br>
+    		      <span class="author"></span><cite><TMPL_IF author><TMPL_VAR author></TMPL_IF></cite>
+               <div class="social">
+                <ul class="list-inline">
+                 <TMPL_IF channel_facebook><li><a href="<TMPL_VAR channel_facebook ESCAPE="HTML">"><i class="fa fa-lg fa-facebook"></i></a></li></TMPL_IF>
+                 <TMPL_IF channel_twitter><li><a href="<TMPL_VAR channel_twitter ESCAPE="HTML">"><i class="fa fa-lg fa-twitter"></i></a></li></TMPL_IF>
+                 <TMPL_IF channel_youtube><li><a href="<TMPL_VAR channel_youtube ESCAPE="HTML">"><i class="fa fa-lg fa-youtube"></i></a></li></TMPL_IF>
+                 <TMPL_IF channel_tumblr><li><a href="<TMPL_VAR channel_tumblr ESCAPE="HTML">"><i class="fa fa-lg fa-tumblr"></i></a></li></TMPL_IF>
+                 <TMPL_IF channel_github><li><a href="<TMPL_VAR channel_github ESCAPE="HTML">"><i class="fa fa-lg fa-github"></i></a></li></TMPL_IF>
+                </ul>
+             </div>
+
+    		    </div>
+    		  </div>
+    		  <div class="col-md-10 body">
+    		    <h1><TMPL_IF title_language> lang="<TMPL_VAR title_language>"</TMPL_IF><a href="<TMPL_VAR link ESCAPE="HTML">" target="_blank"><TMPL_VAR title></a></h1>
+    		    <p><TMPL_VAR content></p>
+    		  </div>
+    		</article>
+
+                <TMPL_IF __LAST__>
+                 ### End <div class="post">
+                </div>
+                ### End <div class="post">
+  	        </div>
+                </TMPL_IF>
+        </TMPL_LOOP>
+
+      </section>
+
+      <footer>
+      </footer>
+    </div> <!-- END: container -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+</html>

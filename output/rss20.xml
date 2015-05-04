@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+<channel>
+	<title>DevOps Brasil</title>
+	<link>devops-br.org</link>
+	<language>en</language>
+	<description>DevOps Brasil - devops-br.org</description>
+
+<item>
+	<title>Gomex: O que é docker? (Vídeo)</title>
+	<guid>http://techfree.com.br/?p=218</guid>
+	<link>http://techfree.com.br/2015/05/o-que-e-docker-video/</link>
+	<description>&lt;p&gt;A ideia é demonstrar o que é Docker, principalmente para aquelas pessoas que ainda não conhecem e não perceberam ainda como isso pode ser interessante para suas atividades.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Por hoje é só! Fiquem atentos para novas postagens sobre &lt;a href=&quot;http://techfree.com.br/category/devops/&quot; target=&quot;_blank&quot;&gt;DevOps&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Sat, 02 May 2015 11:17:41 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Monitorando automaticamente o Docker com Zabbix</title>
+	<guid>http://techfree.com.br/?p=213</guid>
+	<link>http://techfree.com.br/2015/04/monitorando-automaticamente-o-docker-com-zabbix/</link>
+	<description>&lt;p&gt;&lt;a href=&quot;https://www.docker.com/&quot; target=&quot;_blank&quot;&gt;Docker&lt;/a&gt; é uma ferramenta perfeita para criar automaticamente ambientes para novos serviços. Esse processo de criação é muito fácil e em alguns casos é feita automaticamente por outra ferramenta ou script.&lt;/p&gt;
+&lt;div id=&quot;attachment_205&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/04/static1.squarespace.com_.jpeg&quot;&gt;&lt;img class=&quot;wp-image-205 size-full&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/04/static1.squarespace.com_.jpeg&quot; alt=&quot;static1.squarespace.com&quot; width=&quot;599&quot; height=&quot;351&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Monitore para evitar surpresas&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Problemas podem acontecer e a equipe de TI precisa estar preparada para descobrir isso antes que cause indisponibilidade.&lt;/p&gt;
+&lt;h3&gt;Problema&lt;/h3&gt;
+&lt;p&gt;Como o time de monitoramento poderá acompanhar esse rápido processo de criação e manter todos esses ativos no sistema de monitoramento? Nos precisamos monitorar automaticamente todos os containers.&lt;/p&gt;
+&lt;p&gt;&lt;span id=&quot;more-213&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;p&gt;Eu &lt;a href=&quot;https://github.com/gomex/docker-zabbix&quot; target=&quot;_blank&quot;&gt;desenvolvi alguns scripts&lt;/a&gt; para listar containers, adicionar eles no Zabbix usando a funcionalidade LLD e monitorar todos esses novos hosts.&lt;/p&gt;
+&lt;p&gt;Infelizmente nos precisamos de acesso especial para monitorar essas informações no Docker, por conta disso eu usei sudo e job cron do root.&lt;/p&gt;
+&lt;p&gt;Abaixo os itens monitorados por essa solução:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Porcentagem de CPU usado&lt;/li&gt;
+&lt;li&gt;Porcentagem de memória usada&lt;/li&gt;
+&lt;li&gt;Bytes enviados e recebidos por segundo&lt;/li&gt;
+&lt;li&gt;Pacotes enviados e recebidos&lt;/li&gt;
+&lt;li&gt;Pacotes enviados e recebidos, mas descartados&lt;/li&gt;
+&lt;li&gt;Pacotes enviados e recebidos com erros&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Quer conhecer a solução antes de testar? Olhe esse vídeo!&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;Eu testei no seguinte ambiente:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;python 2.7.9&lt;/li&gt;
+&lt;li&gt;docker 1.6&lt;/li&gt;
+&lt;li&gt;zabbix agent and server 2.4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Se você testar em um diferente, por favor me avise.&lt;/p&gt;</description>
+	<pubDate>Mon, 27 Apr 2015 00:59:11 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Lançamento do Docker 1.6</title>
+	<guid>http://techfree.com.br/?p=186</guid>
+	<link>http://techfree.com.br/2015/04/lancamento-do-docker-1-6/</link>
+	<description>&lt;p&gt;O Docker continua crescendo muito rápido e com pouco mais de 2 meses, lança uma nova versão recheada de novidades.&lt;/p&gt;
+&lt;p&gt;Entre as novidades desse lançamento temos: Label para containers, cliente Docker para Windows, driver para log. Isso sem contar com os lançamentos do compose 1.2, Swarm 0.2 e machine 0.2. Vamos detalhar um pouco esse mega release.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/04/docker-whales-transparent.png&quot;&gt;&lt;img class=&quot; size-medium wp-image-188 aligncenter&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/04/docker-whales-transparent-300x250.png&quot; alt=&quot;docker-whales-transparent&quot; width=&quot;300&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;span id=&quot;more-186&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;Label para containers&lt;/h3&gt;
+&lt;p&gt;Esse recurso é muito interessante a nível de organização e agrupamento. Uma vez que as tags tem um papel quase como &amp;#8220;versionamento&amp;#8221;, as labels assumem a marcação que pode incluir &amp;#8220;assuntos&amp;#8221;, &amp;#8220;funcionalidades&amp;#8221;, &amp;#8220;ambiente&amp;#8221; e afins nos containers. Pode parecer pouca coisa para quem usa o Docker para uma situação específica, mas para grandes soluções é uma ajuda e tanto.&lt;/p&gt;
+&lt;p&gt;Quer aprender a usar? Leia &lt;a href=&quot;http://rancher.com/docker-labels/&quot; target=&quot;_blank&quot;&gt;aqui.&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Cliente Docker para Windows&lt;/h3&gt;
+&lt;p&gt;Finalmente parece que a Microsoft conseguiu entrar em alguma tendência no momento certo, pois está apostando fortemente no Docker. A demonstração disso foi a submissão de &lt;a href=&quot;https://github.com/docker/docker/pulls?q=is%3Apr+author%3Aahmetalpbalkan+is%3Aclosed&quot; target=&quot;_blank&quot;&gt;70 pull requests&lt;/a&gt;. Assim como no MAC, O Windows somente poderá ser utilizado como cliente remoto que deve ser conectar a um Docker &amp;#8220;Server&amp;#8221;, que ainda é só pode ser instalado nativamente apenas no GNU/Linux.&lt;/p&gt;
+&lt;p&gt;Muitos amantes do GNU/Linux podem ficar tristes com essa declaração, mas a grande funcionalidade do Docker que é &amp;#8220;Faça uma vez, rode em qualquer lugar&amp;#8221; talvez dependa desse suporte nativo mais amplo da Microsoft. Isso levando em consideração que ela cumpra sua promessa de manter a compatibilidade.&lt;/p&gt;
+&lt;p&gt;Você pode ler mais sobre isso no &lt;a href=&quot;http://azure.microsoft.com/blog/2015/04/16/docker-client-for-windows-is-now-available&quot; target=&quot;_blank&quot;&gt;blog da Azure.&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Driver para log&lt;/h3&gt;
+&lt;p&gt;Tem havido um número crescente de propostas para uma API de registro que lhe permitiria enviar logs de containers para outros sistemas, como Syslog ou um terceiro. Esse novo driver de log  segue o mesmo conceito de storage e exec já presente no Docker.&lt;/p&gt;
+&lt;p&gt;A opção docker run &amp;#8211;log-driver tem três possibilidades:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;json-file (padrão)&lt;/strong&gt;: Que é basicamente o que já usado no Docker atualmente. Todos os logs dos containers são armazenados na pasta /var/lib/docker/containers/&amp;lt;Containers ID&amp;gt;/&amp;lt;container id&amp;gt;-json.log&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;syslog: &lt;/strong&gt;Como o próprio nome já revela, é uma forma de enviar esse log via syslog do host &amp;#8220;hospedeiro&amp;#8221;. Veja como funciona:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;# docker run -d &amp;#8211;log-driver=syslog gomex/debian:padrao echo &amp;#8220;Hello&amp;#8221;&lt;br /&gt;
+c2ed7a98583c82a90111ffba5fb89e73dcd6e681a03c921da538a84ffd7216d0&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;No /var/log/syslog estará assim:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Apr 17 23:29:18 gondor docker[15432]: c2ed7a98583c: Hello&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Perceba que temos tanto o nome aplicação docker como o ID resumido do container, o que é o suficiente para fazer uma boa gerência desse log. Ótimo para quem deseja minimizar o máximo de processos em execução no container, mas não abre mão de um log centralizado e organizado.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;none: &lt;/strong&gt;Como o próprio nome também já revela, é uma forma de não gerar log do container para o host &amp;#8220;hospedeiro&amp;#8221;. Essa opção é ótima para containers que geram logs desnecessários.&lt;/p&gt;
+&lt;h3&gt;Outros lançamentos&lt;/h3&gt;
+&lt;p&gt;A comunidade Docker promoverá alguns Meetups para apresentação das novidades do &lt;a href=&quot;http://www.meetup.com/Docker-Online-Meetup/events/221879788/&quot; target=&quot;_blank&quot;&gt;Swarm&lt;/a&gt;, &lt;a href=&quot;http://www.meetup.com/Docker-Online-Meetup/events/221879950/&quot; target=&quot;_blank&quot;&gt;Compose&lt;/a&gt; e &lt;a href=&quot;http://www.meetup.com/Docker-Online-Meetup/events/221878668/&quot; target=&quot;_blank&quot;&gt;Machine&lt;/a&gt;. Não perca!&lt;/p&gt;
+&lt;h3&gt;Referência:&lt;/h3&gt;
+&lt;p&gt;https://blog.docker.com/2015/04/docker-release-1-6/&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+	<pubDate>Mon, 20 Apr 2015 09:12:28 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Criação automatizada de imagens Docker (GitHub e Docker Hub)</title>
+	<guid>http://techfree.com.br/?p=130</guid>
+	<link>http://techfree.com.br/2015/04/criacao-automatizada-de-imagens-docker-github-e-docker-hub/</link>
+	<description>&lt;p&gt;Como expliquei no &lt;a href=&quot;http://techfree.com.br/2015/03/criando-imagens-docker-dockerfile&quot; target=&quot;_blank&quot;&gt;artigo anterior sobre Docker&lt;/a&gt;, o processo de criação de imagens no Docker é bem simples, mas requer algum esforço e acompanhamento para saber se ele concluiu corretamente e esse resultado será visualizado em linha de comando, normalmente imagem a imagem. Um trabalha &amp;#8220;manual&amp;#8221;.&lt;/p&gt;
+&lt;h2&gt;Criação em massa&lt;/h2&gt;
+&lt;p&gt;Quando você trabalha com muitas imagens, e a mudança dessas imagens é constante, você precisará de uma solução mais automatizada e de um processo mais simples pra viabilizar a criação dessas imagens. É nesse momento que entra o serviço de automatização de criação das imagens do Docker Hub junto ao GitHub.&lt;/p&gt;
+&lt;div id=&quot;attachment_131&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/1b19931164e4185f26aa8013a1c483ae.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-131&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/1b19931164e4185f26aa8013a1c483ae-300x180.png&quot; alt=&quot;Docker e GitHub, agora juntos! :)&quot; width=&quot;300&quot; height=&quot;180&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Docker e GitHub, Juntos! :)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span id=&quot;more-130&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Automação de builds&lt;/h2&gt;
+&lt;p&gt;O Docker Hub tem um serviço de Automação da criação de imagens (Build), com integração com GitHub, ou seja, toda vez que você efetuar um commit e push no Dockerfile do seu repositório será realizado automaticamente um novo build da imagem, já armazenando no Docker Hub e apresentando o log de criação dessa imagem. Praticamente uma integração contínua da sua imagem &lt;img src=&quot;http://techfree.com.br/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;
+&lt;div id=&quot;attachment_182&quot; class=&quot;wp-caption alignnone&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/04/Seleção_001.png&quot;&gt;&lt;img class=&quot;wp-image-182 size-full&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/04/Seleção_001.png&quot; alt=&quot;Seleção_001&quot; width=&quot;969&quot; height=&quot;559&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Olha como é fácil a interface!&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Para configurar isso é muito simples. Basta seguir os passos abaixo:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Crie uma &lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot;&gt;Conta no Docker Hub&lt;/a&gt; e efetue login.&lt;/li&gt;
+&lt;li&gt;Link sua conta do GitHub através do menu &lt;a href=&quot;https://registry.hub.docker.com/account/accounts/&quot; target=&quot;_blank&quot;&gt;&amp;#8220;Link Accounts&amp;#8221;&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://registry.hub.docker.com/builds/add/&quot; target=&quot;_blank&quot;&gt;Configure o build automatizado&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Escolha o projeto GitHub que deseja utilizar. Lembre-se que ele precisa ter um &lt;code&gt;Dockerfile&lt;/code&gt; para efetuar a build.&lt;/li&gt;
+&lt;li&gt;Escolha a branch que você quer efetuar a build (Por padrão é usada a branch &lt;code&gt;master&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Dê um nome a esse build automatizado.&lt;/li&gt;
+&lt;li&gt;Opcionalmente, aplique uma tag Docker tag para a build.&lt;/li&gt;
+&lt;li&gt;Especifique onde o &lt;code&gt;Dockerfile&lt;/code&gt; está localizado. O padrão é &amp;#8220;&lt;code&gt;/&quot;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Uma vez o build automatizado é configurado ele será ativado automaticamente e em poucos minutos você pode visualizar sua imagem &lt;a href=&quot;https://hub.docker.com&quot; target=&quot;_blank&quot;&gt;Docker Hub&lt;/a&gt;. Ela será mantida sincronizada com base no Dockerfile do seu repositório GitHub até que você desative o Build automatizado em questão.&lt;/p&gt;
+&lt;h2&gt;Visualizando a situação da build&lt;/h2&gt;
+&lt;p&gt;Se você quiser visualizar a situação do seu build automatizado, basta acessa o menu &amp;#8220;&lt;a href=&quot;https://registry.hub.docker.com/builds/&quot; target=&quot;_blank&quot;&gt;Build detail&amp;#8221;&lt;/a&gt; na sua imagem dentro da sua conta do Docker Hub, assim conseguirá visualizar o status da sua build e todo o histórico.&lt;/p&gt;
+&lt;h2&gt;Como funciona a atualização&lt;/h2&gt;
+&lt;p&gt;Vale lembrar que você o build automatizado não será ativado com o comando &amp;#8220;&lt;code&gt;docker push&quot;&lt;/code&gt;, você apenas poderá enviar modificação, e por consequência efetuar automaticamente o build dessa imagem, através do git commit e push para o repositório previamente configurado no link entre GitHub e Docker Hub.&lt;/p&gt;
+&lt;p&gt;Você pode criar múltiplos builds automatizados por repositório e configurar ele para apontar para um específico Dockerfile ou branch diferente.&lt;/p&gt;
+&lt;h3 id=&quot;build-triggers&quot;&gt;Build Triggers&lt;/h3&gt;
+&lt;p&gt;É possível ativar o build automatizado a partir de uma url. Basta habilitar o &amp;#8220;Build triggers&amp;#8221; em sua build automatizada. Agora você conseguirá gerar uma build por demanda e não apenas com base em commit e push. &lt;img src=&quot;http://techfree.com.br/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;build-triggers&quot;&gt;Atenção!&lt;/h3&gt;
+&lt;p&gt;Vale a pena lembrar que todo processo descrito aqui não leva em consideração repositórios e imagens privadas. Caso seja sua situação de não publicizar esse trabalho, tenha cuidado com relação a isso.&lt;/p&gt;
+&lt;h2&gt;Referência&lt;/h2&gt;
+&lt;p&gt;https://docs.docker.com/userguide/dockerrepos/&lt;/p&gt;</description>
+	<pubDate>Mon, 13 Apr 2015 11:40:40 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Criando imagens Docker (Dockerfile)</title>
+	<guid>http://techfree.com.br/?p=111</guid>
+	<link>http://techfree.com.br/2015/04/criando-imagens-docker-dockerfile/</link>
+	<description>&lt;p&gt;No &lt;a href=&quot;http://techfree.com.br/2015/03/modificando-e-distribuindo-maquinas-docker/&quot; target=&quot;_blank&quot;&gt;artigo anterior&lt;/a&gt; sobre Docker, eu expliquei como modificar uma imagem docker usando &lt;strong&gt;COMMIT&lt;/strong&gt;, mas propositalmente não comentei que essa não é a melhor prática &lt;img src=&quot;http://techfree.com.br/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&gt; Evitei tocar nesse assunto para não frustrar o aprendizado, pois é necessário aprender como funciona o &lt;strong&gt;COMMIT&lt;/strong&gt;, com &lt;strong&gt;DIFF&lt;/strong&gt; e afins.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/docker1.png&quot;&gt;&lt;img class=&quot; wp-image-113 size-medium aligncenter&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/docker1-300x148.png&quot; alt=&quot;&quot; width=&quot;300&quot; height=&quot;148&quot; /&gt;&lt;/a&gt;A melhor forma de modificar uma imagem Docker é recriando ela, ou seja, modificando seu Dockerfile, ou criando um Dockerfile novo tendo a imagem escolhida como base e nesse artigo falaremos sobre tudo isso.&lt;/p&gt;
+&lt;p&gt;&lt;span id=&quot;more-111&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Dockerfile&lt;/h2&gt;
+&lt;p&gt;Dockerfile é um arquivo, que contém um conjunto de instruções necessárias para se criar uma imagem Docker, ou seja, com posse do Dockerfile de uma determinada imagem, basta modificar o que deseja e recriar a imagem &amp;#8220;do zero&amp;#8221;, isso pode demorar um pouco mais, mas essa imagem será muito mais &amp;#8220;enxuta&amp;#8221; e você terá controle total do seu estado, o que seria bem mais difícil no modelo de efetuar commit de um container.&lt;/p&gt;
+&lt;p&gt;Caso não tenha o Dockerfile, você pode usar uma imagem a sua escolha como base e então criar a sua imagem como uma camada acima.&lt;/p&gt;
+&lt;h2&gt;Sintaxes básicas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;FROM :&lt;/strong&gt; É a imagem base. Normalmente é usada com nome de distribuição (Debian, Ubuntu e afins), pois não precisaremos criar toda estrutura, certo?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;MAINTAINER :&lt;/strong&gt; É onde se especifica o autor da imagem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RUN :&lt;/strong&gt; São as instruções que serão executadas para criação da imagem em questão.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ENTRYPOINT :&lt;/strong&gt; Especifica o que o que será executado ao iniciar o container. Ele age como precedente a sintaxe &lt;strong&gt;CMD&lt;/strong&gt;, ou seja, caso o &lt;strong&gt;ENTRYPOINT&lt;/strong&gt; seja &amp;#8220;top&amp;#8221;, o &lt;strong&gt;CMD&lt;/strong&gt; pode ser &amp;#8220;-b&amp;#8221; que nesse caso ele executaria o top em modo batch. Uma vez que o &lt;strong&gt;ENTRYPOINT&lt;/strong&gt; não seja especificado, e um &lt;strong&gt;CMD&lt;/strong&gt; seja usado, o &lt;strong&gt;ENTRYPOINT&lt;/strong&gt; padrão é &amp;#8220;&lt;code&gt;/bin/sh -c&lt;/code&gt;&amp;#8220;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EXPOSE :&lt;/strong&gt; Usado para informar qual porta o container docker irá &amp;#8220;escutar&amp;#8221;. Docker usa essa informação para interconexão entre containers, ao utilizar links. &lt;strong&gt;EXPOSE&lt;/strong&gt; não define qual porta será exposta para o hospedeiro ou tornar possível o acesso externo para portas do container em questão. Para expor essas portas utilize em tempo de inicialização da imagem a flag -p ou -P.&lt;/p&gt;
+&lt;p&gt;Para explicação mais exaustiva das sintaxes já explanadas e outras novas, acesse &lt;a href=&quot;https://docs.docker.com/reference/builder/&quot;&gt;essa documentação.&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Exemplo&lt;/h2&gt;
+&lt;p&gt;Crie uma pasta com o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# mkdir nginx&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Entre nessa pasta:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# cd nginx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;E então crie um arquivo chamado &amp;#8220;Dockerfile&amp;#8221; com o seguinte conteúdo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;FROM debian&lt;br /&gt;
+MAINTAINER Rafael Gomes &amp;lt;gomex@riseup.net&amp;gt;&lt;br /&gt;
+RUN apt-get update&lt;br /&gt;
+RUN apt-get install -y nginx&lt;br /&gt;
+ENTRYPOINT [&quot;/usr/sbin/nginx&quot;]&lt;br /&gt;
+EXPOSE 80&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Com esse Dockerfile, temos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Uma imagem com base na imagem do Debian, ou seja, não precisamos nos preocupar com o sistema básico.&lt;/li&gt;
+&lt;li&gt;O autor dessa imagem sou eu &lt;img src=&quot;http://techfree.com.br/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&gt;&lt;/li&gt;
+&lt;li&gt;Primeiro eu atualizo a base do apt-get e então instalo o nginx.&lt;/li&gt;
+&lt;li&gt;Ao iniciar essa imagem ela executará o nginx automaticamente.&lt;/li&gt;
+&lt;li&gt;A porta exposta para possível interconexão entre containers é a porta 80.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nesse &lt;a href=&quot;https://docs.docker.com/articles/dockerfile_best-practices/&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt; tem um ótimo documento explicando as boas práticas na criação de um Dockerfile.&lt;/p&gt;
+&lt;h2&gt;Criando a imagem&lt;/h2&gt;
+&lt;p&gt;Com o Dockerfile preenchido, execute o comando abaixo para criar sua imagem:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker build -t=gomex/nginx .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;No lugar de &amp;#8220;gomex&amp;#8221; coloque o seu usuário da &lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot;&gt;nuvem pública do docker&lt;/a&gt; e no lugar de &amp;#8220;nginx&amp;#8221; o nome da sua imagem.&lt;/p&gt;
+&lt;p&gt;Ao terminar, pode efetuar o push para a nuvem pública e assim proporcionar a distribuição da sua imagem:&lt;br /&gt;
+&lt;code&gt;&lt;br /&gt;
+# docker push gomex/nginx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pronto! Agora já tem sua imagem prontinha, totalmente &amp;#8220;enxuta&amp;#8221; e disponível para que outra pessoa possa baixar e utilizar.&lt;/p&gt;
+&lt;p&gt;Por hoje é só pessoal, logo teremos mais artigos sobre &lt;a title=&quot;Docker&quot; href=&quot;http://techfree.com.br/category/docker/&quot; target=&quot;_blank&quot;&gt;Docker&lt;/a&gt;. Fiquem atentos.&lt;/p&gt;</description>
+	<pubDate>Sun, 05 Apr 2015 11:09:36 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Docker poderia substituir o gerenciador de pacotes?</title>
+	<guid>http://techfree.com.br/?p=157</guid>
+	<link>http://techfree.com.br/2015/04/docker-poderia-substituir-o-gerenciador-de-pacotes/</link>
+	<description>&lt;p&gt;A utilização de containers, que tem hoje o Docker como principal representante, tem aumentado rapidamente com sua facilidade e portabilidade de liberação de aplicações prontas. Com base nisso, fica a seguinte pergunta: &amp;#8220;Poderia a tecnologia de containers, como o Docker, ser utilizada para resolver o nosso antigo problema com gerenciador de pacotes? Alguns acreditam que containers podem ser um caminho para resolver a &amp;#8220;dor de cabeça&amp;#8221; no gerenciamento de dependência e incompatibilidade entre distribuições e versões do mesmo sistema.&lt;/p&gt;
+&lt;div id=&quot;attachment_158&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/04/recording-package-delivery-000005661610-100264112-primary.idge_.jpg&quot;&gt;&lt;img class=&quot;wp-image-158 size-medium&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/04/recording-package-delivery-000005661610-100264112-primary.idge_-300x200.jpg&quot; alt=&quot;recording-package-delivery-000005661610-100264112-primary.idge&quot; width=&quot;300&quot; height=&quot;200&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Gerenciamento de pacotes no GNU/Linux sempre foi uma dor de cabeça para algumas situações.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span id=&quot;more-157&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;No campo do &amp;#8220;sim&amp;#8221;: O pessoal do CoreOS, que são criadores de uma distribuições GNU/Linux, que gira inteiramente em torno de containers, e não dos pacotes, como unidade básica de modularidade.&lt;/p&gt;
+&lt;p&gt;Kelsey Hightower, Engenheiro Chef do CoreOS, diz que a empresa oferece &amp;#8220;prova viva que não é apenas possível, como pode lidar melhor com designer de sistema e eficiência.&amp;#8221; Contudo ele acredita que gerenciador de pacotes ainda é utilizável, &amp;#8220;principalmente para construção de um sistema operacional a partir de um conjunto discreto de componentes que devem executar em conjunto. Esta é uma área onde os gerenciadores de pacotes do GNU/Linux brilham.&amp;#8221; CoreOS não utiliza um gerenciador de pacotes típico, como apt ou yum, mas sim um sistema portage.&lt;/p&gt;
+&lt;p&gt;Kelsey alega que substituir inteiramente um sistema de gerenciador de pacotes de proposito genérico para o Docker ou outro gerenciador de container pode ser difícil, em parte porque o Docker não tem mecanismo para solucionar dependência. &amp;#8220;Onde Docker brilha é no empacotamento e distribuição de aplicações&amp;#8221; ele diz. (Docker se recusou a responder esse artigo, alegando restrição de tempo.)&lt;/p&gt;
+&lt;p&gt;Com ênfase maior da Red Hat em containers, é lógico que a empresa também poderá ver containers como um substituto para o gerenciamento de pacotes.&lt;/p&gt;
+&lt;p&gt;Lars Herrmann, gerente geral do &amp;#8220;Red Hat Enterprise Linux&amp;#8221; e &amp;#8220;Red Hat Enterprise Virtualization&amp;#8221; na Red Hat, acredita que é possível que o gerenciador de pacote seja substituído por containers, &amp;#8220;mas esse não é o melhor caminho&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;Além da gerência de dependência, diz Herrmann em um email, que um gerenciador de pacote provem mais três outros &amp;#8220;boons&amp;#8221;: Instruções de onde será instalado o software em seu sistema, metadados estruturados para tornar fácil dizer o que e onde será instalado, e um mecanismo para verificar softwares instalados com base no metadado do gerenciador de pacotes.&lt;/p&gt;
+&lt;p&gt;Herrmann diz &amp;#8220;Estes valores aplicam-se ainda em um mundo &amp;#8216;container-centric&amp;#8217; &amp;#8221; O que significa que todas essas funções precisam ser replicados pelos containers. &amp;#8220;Além disso, é preciso haver uma maneira fácil de &amp;#8216;olhar&amp;#8217; para dentro desses containers, afim de verificar o que está lá dentro, e assim identificar quaisquer problemas conhecidos.&amp;#8221;&lt;/p&gt;
+&lt;p&gt;Da mesma forma, o gerenciamento de pacotes abrange funções internas que os próprios containers ainda não lidam. De acordo com Herrmann, o Docker &amp;#8220;agrega os pacotes para uma aplicação ou microservice inteiro; isso não ajuda obter os componentes certos para um container de forma funcional. Obviamente, essa tarefa não requer diretamente os gerenciadores de pacotes existentes, mas eles fazem um grande trabalho, então por que não usá-los?&lt;/p&gt;
+&lt;p&gt;Bryant Cantrill, CTO da Joyent (outra empresa até o pescoço no mundo do container) Também vê os containers e gerenciadores de pacotes servindo para funções separadas, desde que &amp;#8220;uma imagem Docker está em uma camada de abstração mais elevado do que um pacote apt ou yum&amp;#8221; Ele escreveu isso por e-mail.&lt;/p&gt;
+&lt;p&gt;Dito isso, ele acredita que o Docker poder tornar o empacotamento obsoleto, como o gerenciamento de pacote fez obsoleto a forma manual de desempacotar arquivos (como arquivos TAR) e assim se tornar um novo padrão de formato para aplicações. &amp;#8220;Um engenheiro que conheço a muito tempo, coloca o Docker de forma diferente: Docker é ELF do século 21. (ELF é o &amp;#8216;&lt;a href=&quot;http://en.wikipedia.org/wiki/Executable_and_Linkable_Format&quot; target=&quot;_blank&quot;&gt;Executable and Likable Format&lt;/a&gt;&amp;#8216; que é como o binário é representado em sistemas UNIX) De qualquer maneira, Docker parece prestes a se tornar o padrão de fato para a forma como se cria imagem para sistemas. Eu acho que isso é uma clara vitória tanto para desenvolvedores, como para os operadores de infraestrutura.&amp;#8221;&lt;/p&gt;
+&lt;p&gt;Esse artigo é uma tradução livre do artigo &lt;a href=&quot;http://www.infoworld.com/article/2903313/application-virtualization/could-docker-replace-package-management.html#tk.rss_linux&quot; target=&quot;_blank&quot;&gt;&amp;#8220;Could Docker replace package management?&amp;#8221;&lt;/a&gt; da Infoworld. Encontrei esse artigo e achei interessante para levantar esse debate. Comentem, o que acham disso? Realmente o Docker, ou qualquer outro gerenciador de containers pode ser um sucessor do gerenciador de pacotes?&lt;/p&gt;
+&lt;h3&gt;Minha opinião&lt;/h3&gt;
+&lt;p&gt;Eu acho que containers é um bom caminho para &amp;#8220;tornar&amp;#8221; obsoleto o gerenciamento de pacotes, mas ainda não está pronto. As duas soluções vão coexistir durante algum tempo, mas realmente acho que o nível de abstração subirá um pouco mais em médio prazo, pois não acredito que teremos tempo para resolver manualmente instalações de dependência para soluções complexas.&lt;/p&gt;
+&lt;p&gt;Assim como hoje é possível compilar os pacotes manualmente, acho que no futuro continuaremos podendo instalar &amp;#8220;da moda antiga&amp;#8221;, mas o uso da solução de containers prontos, customizáveis e portáveis será quase uma necessidade. Talvez isso faça o conceito de distribuição perder relevância, mas é algo que ainda não tenho como certo em minha reflexão ainda e fica para outro texto.&lt;/p&gt;</description>
+	<pubDate>Sat, 04 Apr 2015 01:17:39 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: O porquê de escolhermos o Puppet</title>
+	<guid>http://techfree.com.br/?p=120</guid>
+	<link>http://techfree.com.br/2015/03/o-porque-escolhemos-o-puppet/</link>
+	<description>&lt;p&gt;Na organização que trabalho foi colocada a demanda de implantar um ferramenta de gerência de configuração, pois nosso ambiente sofre de uma grande carência em documentar suas mudanças, proporcionar uma documentação atualizada, isso sem falar na velocidade de atendimento de novas demandas ser prejudicada pela necessidade de atividade repetitiva/operacional majoritariamente manual.&lt;/p&gt;
+&lt;p&gt;Depois de uma longa etapa de analise preliminar iniciamos a comparação entre três soluções que poderia atender nossas expectativas: Chef, Puppet e Salt.&lt;/p&gt;
+&lt;div id=&quot;attachment_125&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/Choices-1.jpg&quot;&gt;&lt;img class=&quot;wp-image-125 size-medium&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/Choices-1-300x239.jpg&quot; alt=&quot;Choices 1&quot; width=&quot;300&quot; height=&quot;239&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Escolher nem sempre é uma tarefa fácil&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span id=&quot;more-120&quot;&gt;&lt;/span&gt;Dentre vários critérios analisados, levantamos cinco pontos que julgamos ser os mais relevantes para nossa realidade:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Complexidade de instalação&lt;/li&gt;
+&lt;li&gt;Curva de aprendizado&lt;/li&gt;
+&lt;li&gt;Orquestrador&lt;/li&gt;
+&lt;li&gt;Dashboard&lt;/li&gt;
+&lt;li&gt;Quem utiliza&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Com base nisso, instalamos cada solução, testamos o que ela poderia fazer para nos ajudar e refletirmos com base nos pontos já informados acima. Segue abaixo o resultado da nossa análise.&lt;/p&gt;
+&lt;h2&gt;Complexidade de instalação&lt;/h2&gt;
+&lt;h3&gt;Puppet&lt;/h3&gt;
+&lt;p&gt;A instalação dos pacotes puppetmaster(servidor) e puppet(clientes) na sua versão open-source não revelou-se muito complicada. Sua documentação oficial orienta inicialmente instalar o pacote puppetlabs-release com a versão referente ao sistema operacional. A única ressalva com relação à essa etapa é a escolha do pacote para o servidor, pois o puppetmaster é recomendável somente para ambiente menores, com pouca carga, pois seu servidor web embutido (&lt;a href=&quot;http://en.wikipedia.org/wiki/WEBrick&quot; target=&quot;_blank&quot;&gt;webrick&lt;/a&gt;) suporta poucos nós clientes para um ambiente mais escalável deve-se optar pelo puppetmaster-passenger.&lt;/p&gt;
+&lt;p&gt;Apesar de orquestrador ser um critério analisado mais adiante, a complexidade de sua instalação está dentro do escopo desse critério. Embora a documentação oficial não faça nenhuma recomendação explicita ao uso do &lt;a href=&quot;https://puppetlabs.com/mcollective&quot; target=&quot;_blank&quot;&gt;MCollective&lt;/a&gt; como orquestrador na versão Opensource, na Enterprise ela já vem embutida, somando isso ao fato dele já possuir plugins nativos para o Puppet pesou na escolha dessa ferramenta para a tarefa de orquestração.&lt;/p&gt;
+&lt;p&gt;Na versão Opensource do Puppet, o orquestrador não é configurado por padrão, houve um esforço maior na sua instalação e configuração. Há dependência da instalação e configuração de um Midleware, sistema de mensageira (&lt;a href=&quot;http://activemq.apache.org/&quot; target=&quot;_blank&quot;&gt;Apache ActiveMQ&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Tivemos dificuldade com relação a falta de orientação para cenários mais complexos, por exemplo, com relação a questão de segurança na comunicação do midleware.&lt;/p&gt;
+&lt;h3&gt;Salt&lt;/h3&gt;
+&lt;p&gt;Basta instalar os pacotes salt-master(servidor) e salt-minion(clientes), fazer uma simples configuração para que os nós clientes reconheçam o master, posteriormente o master autenticar chaves publicas dos clientes e o ambiente já estará pronto para ser utilizado.&lt;/p&gt;
+&lt;p&gt;O orquestrador faz parte da solução Salt, sendo assim, a facilidade na instalação apresentada até então abrange também o orquestrador.&lt;/p&gt;
+&lt;h3&gt;Chef&lt;/h3&gt;
+&lt;p&gt;Sua instalação, com a exceção do cliente (chef-client), foi dificultada por alguns fatores.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Na topologia cliente-servidor, o chef se diferencia das demais em virtude dele ser composto por 3 itens: Server; Workstation e Nodes, que apesar da documentação oficial explicar a função de cada um deles, a mesma não dá uma orientação sobre sua instalação.&lt;/li&gt;
+&lt;li&gt;Com relação ao pacote para servidor (chef-server), no site oficial é disponibilizado apenas para Ubuntu e RHEL, e eles não demonstram nenhum interesse manter uma versão para o Debian no lado do servidor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Conclusão desse critério&lt;/h3&gt;
+&lt;p&gt;Adotando a topologia cliente-servidor, visto que todas os softwares analisados permitem também a opção standalone, ou seja, em modo autônomo, o Salt demonstrou-se a mais simples, o Chef mais complexa, ficando o puppet com complexidade intermediária. A opção pelo modelo cliente-servidor foi feita em virtude da gerência centralizada e a possibilidade do acompanhamento das modificações nos agentes através de um painel (dashboard), item que será melhor detalhado mais adiante.&lt;/p&gt;
+&lt;h2&gt;Curva de aprendizado&lt;/h2&gt;
+&lt;p&gt;Antes de iniciarmos a discussão desse critério, faz-se necessário a contextualização de alguns aspectos sobre gerenciamento ou automação de configurações, referentes aos três softwares examinados.&lt;/p&gt;
+&lt;p&gt;Em todos eles, as configurações são codificadas estaticamente através de arquivos chamados: Manifest no Puppet, Formulas no Salt e Cookbooks no Chef. Nessa parte não houve muita dificuldade de compreensão, não necessitando de um conhecimento muito avançado à nível de programação ou de linguagem específica, apesar de que, no Chef os Cookbooks podem ser escritos também em Ruby puro.&lt;/p&gt;
+&lt;p&gt;O interessante é que em todos eles utilizam algum conceito de linguagens de Orientação à Objetos como por exemplo, suporte a funcionalidade de heranças.&lt;/p&gt;
+&lt;p&gt;Outro detalhe não menos importantes e bem intuitivo, consiste em que todos eles possuem utilitários responsáveis pela obtenção de informação dos agentes: &lt;a href=&quot;https://puppetlabs.com/facter&quot; target=&quot;_blank&quot;&gt;Facter&lt;/a&gt; no Puppet, &lt;a href=&quot;http://docs.saltstack.com/en/latest/topics/targeting/grains.html&quot; target=&quot;_blank&quot;&gt;Grains&lt;/a&gt; no Salt e &lt;a href=&quot;https://docs.chef.io/ohai.html&quot; target=&quot;_blank&quot;&gt;Ohai&lt;/a&gt; no Chef, com os quais descrevem as propriedades dos sistemas operacionais, permitindo filtros na definição de estados das configurações assim como na orquestração.&lt;/p&gt;
+&lt;p&gt;Nesse critério, houve um empate técnico, pois todas são semelhantes no que diz respeito às definições de gerenciamento ou automatização de configurações, com perspectiva bastante compreensíveis.&lt;/p&gt;
+&lt;h2&gt;Orquestrador&lt;/h2&gt;
+&lt;p&gt;Segundo o Guto Carvalho (slide 5 da palestra Orquestração com MCollective): &amp;#8220;Orquestrar significa invocar ações de forma paralela ou não, em tempo real, em diversos servidores de um datacenter, fazendo isto de forma automatizada, eficiente e controlada&amp;#8221;. Orquestração não é gerenciamento de configuração e sim um tipo diferente de automatização em que ambos se complementam. Diferencia-se da seguinte forma, enquanto que na gerência de configurações, os estados desejados de um sistema é modelado, na orquestração, as ações são executadas remotamente sob demanda.&lt;/p&gt;
+&lt;p&gt;Nesse critério somente o Puppet e o Salt serão discutidos, visto que o Chef não possui orquestrador integrado como no Salt, nem mesmo tem em sua documentação alguma menção à nenhum utilitário externo desse tipo, como o Puppet tem o MCollective como exemplo, no seu caso, o uso da ferramenta como o knife com ssh, a qual está mais para execução remota, seria o que mais se aproximaria de orquestração.&lt;/p&gt;
+&lt;h3&gt;Puppet&lt;/h3&gt;
+&lt;p&gt;O MCollective, orquestrador adotado pelo mesmo, é uma ferramenta bem simples de utilizar, com bastantes plugins disponíveis, inclusive para o próprio Puppet. Ele disponibiliza diversas funcionalidades, como instalação de pacotes, gerência de serviços, shell (interpretador de comandos) e etc, além de ser extensível através de protocolo RPC. A complexidade de sua instalação, pelo fato do mesmo ser um outro software(pacote), com configuração própria e necessidade de instalar um pacote agent e client para cada plugin disponível, somando-se a depência de um midlleware, no caso o &lt;a href=&quot;http://activemq.apache.org/&quot; target=&quot;_blank&quot;&gt;ActiveMQ&lt;/a&gt;, que também demanda uma instalação separada.&lt;/p&gt;
+&lt;h3&gt;Salt&lt;/h3&gt;
+&lt;p&gt;No Salt, da mesma forma que o MCollective, seu orquestrador, disponibiliza uma infinidade de módulos, oferecendo funcionalidades como: instalação de pacotes, gerência de serviços, shell (interpretador de comandos) e etc. além de ser extensível. O fato de já vir integrado e configurado, inclusive com seu middleware (&lt;a href=&quot;http://zeromq.org/&quot; target=&quot;_blank&quot;&gt;ZeroMQ&lt;/a&gt;) cuja a leveza de sua biblioteca serve como framework de concorrência, sem falar no fato da comunicação ser nativamente segura entre o master.&lt;/p&gt;
+&lt;h3&gt;Conclusão desse critério&lt;/h3&gt;
+&lt;p&gt;o Salt levou uma grande vantagem nesse item, por essa funcionalidade já vir integrada e utilizar técnicas que permitem escalabilidade e velocidade na execução remota de suas tarefas, com uma linguagem bastante homogênea em virtude de sua agregação, ao contrário do MCollective no Puppet, ficando em segundo lugar como opção nesse item.&lt;/p&gt;
+&lt;h2&gt;Dashboard&lt;/h2&gt;
+&lt;p&gt;Após toda contextualização sobre automatização ou gerenciamento de configurações e orquestração, esse item é de fundamental importância para o nosso ambiente. O envio de relatórios, classificação externa e acompanhamento do ciclo de vida dos ativos em tempo real, ou seja, toda a visibilidade do que acontece no nosso ambiente após aplicação de alguma nova configuração. Tudo isso é esperado em um Dashboard.&lt;/p&gt;
+&lt;p&gt;Nesse quesito apenas uma ferramenta externa atendeu nossas expectativas. O &lt;a href=&quot;http://theforeman.org/&quot; target=&quot;_blank&quot;&gt;Foreman&lt;/a&gt; é a ferramenta ideal para nosso ambiente, pois consiste em um gerenciamento do ciclo de vida desde provisionamento, configuração para orquestração e monitoramento. Tem interação nativa com o Puppet e sua interface web oferece várias informações com gráficos e formatos bastantes intuitivos, assim como muito mais recursos que os prórpios painéis oferecidos pelos próprios projetos das três ferramentas observadas.&lt;/p&gt;
+&lt;p&gt;A documentação do Foreman mencionar suporte também para o Salt e Chef, mas com limitação de certos recursos, isso sem falar na interação nativa que ele tem apenas com o Puppet, a qual contribuiu para promovê-lo como opção mais vantajosa em comparação às outras duas ferramentas nesse item.&lt;/p&gt;
+&lt;h2&gt;Quem usa&lt;/h2&gt;
+&lt;p&gt;Observamos quais as organizações/empresas que usam todas as três soluções e chegamos a conclusão que o Puppet tem um conjunto de usuários mais próximos da nossa organização, além de ter um número de &amp;#8220;grandes players&amp;#8221; bem superior as outras.&lt;/p&gt;
+&lt;h2&gt;Conclusão final&lt;/h2&gt;
+&lt;p&gt;Com base em tudo que foi explanado até então, principalmente no que tange a quem usa a ferramenta e existência de um ótimo suporte ao Dashboard que atende nossas expectativas, fica evidente que a solução que mais atende nossa necessidade é de fato o Puppet, mesmo o Salt tendo demonstrado ser uma alternativa bem mais simples.&lt;/p&gt;
+&lt;h2&gt;Fonte&lt;/h2&gt;
+&lt;p&gt;Esse texto foi construído com base no relatório final apresentado pelo bolsista Péricles Júnior, que trabalha na Coordenação de Redes e Infraestrutura de Superintendência de Tecnologia da Informação da Universidade Federal da Bahia.&lt;/p&gt;</description>
+	<pubDate>Sat, 28 Mar 2015 05:54:19 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Modificando e distribuindo “máquinas” Docker</title>
+	<guid>http://techfree.com.br/?p=93</guid>
+	<link>http://techfree.com.br/2015/03/modificando-e-distribuindo-maquinas-docker/</link>
+	<description>&lt;p&gt;Como relatei nesse &lt;a title=&quot;Docker infraestrutura simples e rápida&quot; href=&quot;http://techfree.com.br/2015/03/docker-infraestrutura-simples-e-rapida&quot; target=&quot;_blank&quot;&gt;artigo&lt;/a&gt;, um dos objetivos do Docker é sua facilidade para distribuição de imagens/&amp;#8221;máquinas&amp;#8221;, mantendo a sua portabilidade e simplicidade&lt;/p&gt;
+&lt;p&gt;Nesse texto, vou demonstrar como podemos modificar as imagens, que muitos chamam de máquina, e então distribuir via &lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot;&gt;nuvem pública do Docker.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/docker-whales-transparent.png&quot;&gt;&lt;img class=&quot; size-medium wp-image-104 aligncenter&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/docker-whales-transparent-300x250.png&quot; alt=&quot;docker-whales-transparent&quot; width=&quot;300&quot; height=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;span id=&quot;more-93&quot;&gt;&lt;/span&gt;Iniciando a máquina&lt;/h2&gt;
+&lt;p&gt;Para modificar uma imagem, precisamos que ela seja iniciada e então teremos a camada que chamados de container. Que é onde as mudanças são aplicadas. Para iniciar a &amp;#8220;máquina&amp;#8221; usa-se o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker run -d -p 80:80 nginx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Agora vamos obter o número de identificação do container com o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker ps&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Modifique a máquina&lt;/h2&gt;
+&lt;p&gt;Execute as modificações que deseja nessa &amp;#8220;máquina&amp;#8221;. Com o comando abaixo é possível acessar o shell da máquina recém iniciada.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker exec -it &amp;lt;id do container&amp;gt; bash&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Verifique o que mudou&lt;/h2&gt;
+&lt;p&gt;Para verificar quais arquivos de fato foram modificados nesse container. Execute o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker diff &amp;lt;id do container&amp;gt;&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Aplique a mudança&lt;/h2&gt;
+&lt;p&gt;Agora que tem certeza sobre a mudança que será feita. Vamos criar uma nova imagem com base no estado desse container com o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker commit &amp;lt;id do container&amp;gt; gomex/nginx-modificado&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Atente que o termo &amp;#8220;gomex&amp;#8221; é meu usuário previamente registrado na &lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot;&gt;nuvem pública do Docker&lt;/a&gt;. E tudo que vem depois da &amp;#8220;/&amp;#8221; é o nome da imagem que desejo criar. Com o comando abaixo será possível conferir que a máquina informada foi criada:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker images&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;Compartilhe&lt;/h2&gt;
+&lt;p&gt;Agora vamos disponibilizar essa imagem para que outras pessoas possam baixar e usufruir da sua colaboração. Para isso usa-se o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker push gomex/nginx-modificado&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Acesse a &lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot;&gt;nuvem pública do Docker&lt;/a&gt; e verá que sua imagem estará disponível para quem quiser baixar.&lt;/p&gt;
+&lt;div id=&quot;attachment_107&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/what_is_docker.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-107&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/what_is_docker-300x226.png&quot; alt=&quot;Docker facilitando o trabalho colaborativo.&quot; width=&quot;300&quot; height=&quot;226&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Docker facilitando o trabalho colaborativo.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Pronto! Por hoje é só &lt;img src=&quot;http://techfree.com.br/wp-includes/images/smilies/simple-smile.png&quot; alt=&quot;:)&quot; class=&quot;wp-smiley&quot; /&gt; Aguardem novas postagens sobre o &lt;a title=&quot;Docker &quot; href=&quot;http://techfree.com.br/category/docker/&quot; target=&quot;_blank&quot;&gt;Docker&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Thu, 26 Mar 2015 03:44:24 +0000</pubDate>
+</item>
+<item>
+	<title>Gomex: Docker, infraestrutura simples e rápida</title>
+	<guid>http://techfree.com.br/?p=73</guid>
+	<link>http://techfree.com.br/2015/03/docker-infraestrutura-simples-e-rapida/</link>
+	<description>&lt;h2&gt;O que é Docker&lt;/h2&gt;
+&lt;p&gt;Uma plataforma aberta para desenvolvedores e administradores de sistemas, usada para construir, executar e distribuir &amp;#8220;máquinas&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;&amp;#8220;Máquina&amp;#8221; será sempre usada entre parentese, pois esse termo será usado apenas para facilitar o entendimento. Ele não é correto, uma vez que máquina mesmo é somente o host onde o docker é executado, ou seja, tudo roda de forma isolada na mesma máquina.&lt;/p&gt;
+&lt;p&gt;Tudo isso é possível por conta da Docker Engine, que é um forma de empacotamento de infraestrutura, que é portável e simples, na qual constitui facilmente várias &amp;#8220;máquinas&amp;#8221; executando no mesmo kernel, porem isoladas logicamente, usando as tecnologias &lt;a href=&quot;https://linuxcontainers.org/&quot; target=&quot;_blank&quot;&gt;LXC&lt;/a&gt;, &lt;a href=&quot;http://aufs.sourceforge.net/&quot; target=&quot;_blank&quot;&gt;AUFS&lt;/a&gt; e &lt;a href=&quot;https://btrfs.wiki.kernel.org/index.php/Main_Page&quot; target=&quot;_blank&quot;&gt;BTRFS&lt;/a&gt;.&lt;/p&gt;
+&lt;div id=&quot;attachment_102&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/docker_vs_vmware.png&quot;&gt;&lt;img class=&quot;size-medium wp-image-102&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/docker_vs_vmware-300x193.png&quot; alt=&quot;Parece Virtualização, mas não é :)&quot; width=&quot;300&quot; height=&quot;193&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Parece Virtualização, mas não é :)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span id=&quot;more-73&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Continuando sobre o conceito da plataforma Docker, eles disponibilizam também um serviço de &lt;a href=&quot;https://hub.docker.com/&quot; target=&quot;_blank&quot;&gt;nuvem&lt;/a&gt; para armazenar e compartilhar imagens prontas, criadas tanto pela comunidade responsável pelo Docker, como por qualquer outra pessoa interessada, e o melhor, sem custo!&lt;/p&gt;
+&lt;p&gt;Cada pessoa registrada no serviço tem a possibilidade de criar um número ilimitado de imagens públicas (todos podem ver e baixar) e apenas uma imagem privada na conta gratuita.&lt;/p&gt;
+&lt;h2&gt;Imagens e Containers&lt;/h2&gt;
+&lt;p&gt;Uma máquina docker pode ser composta de várias camadas. E essas camadas se dividem em dois tipos; Imagens e Containers.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Imagens:&lt;/strong&gt; Uma vez as &amp;#8220;máquinas&amp;#8221; em execução essas camadas são montadas como somente leitura. Elas podem ser compartilhadas por várias &amp;#8220;máquinas&amp;#8221;, ou seja, uma vez modificadas afetam todas as &amp;#8220;máquinas&amp;#8221; que usam essas imagens.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Containers:&lt;/strong&gt; Essas camadas são montadas como leitura e escrita. É onde de fato estão as modificações da &amp;#8220;máquina&amp;#8221; em execução. Toda modificação realizada em uma imagem é feita a partir de um container.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&quot;attachment_82&quot; class=&quot;wp-caption aligncenter&quot;&gt;&lt;a href=&quot;http://techfree.com.br/wp-content/uploads/2015/03/oque_e_docker.jpeg&quot;&gt;&lt;img class=&quot;size-medium wp-image-82&quot; src=&quot;http://techfree.com.br/wp-content/uploads/2015/03/oque_e_docker-300x284.jpeg&quot; alt=&quot;Imagens e containers, perfeita sinergia. &quot; width=&quot;300&quot; height=&quot;284&quot; /&gt;&lt;/a&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Imagens e containers, perfeita sinergia.&lt;/p&gt;&lt;/div&gt;
+&lt;h2&gt;Instalando o Docker&lt;/h2&gt;
+&lt;p&gt;Se você usar Debian Jessie ou superior, não terá problemas. Basta executar o comando abaixo:&lt;br /&gt;
+&lt;code&gt;# aptitude install docker.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Caso não utilize GNU/Linux, pode usar o &lt;a href=&quot;http://boot2docker.io/&quot; target=&quot;_blank&quot;&gt;boot2docker&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Conhecendo alguns comandos básicos&lt;/h2&gt;
+&lt;p&gt;Infelizmente o docker ainda não tem uma interface web ou gráfica desktop suportada de forma estável pela sua comunidade oficial, sendo assim falaremos aqui apenas de comandos no shell.&lt;/p&gt;
+&lt;p&gt;Seguem abaixo os comandos mais básicos do docker:&lt;br /&gt;
+&lt;code&gt;&lt;br /&gt;
+docker pull [nome da imagem]&lt;/code&gt; : Baixar imagem&lt;br /&gt;
+&lt;code&gt;docker images&lt;/code&gt; : Listar imagens&lt;br /&gt;
+&lt;code&gt;docker run [nome da imagem]&lt;/code&gt; : Iniciar a imagem&lt;br /&gt;
+&lt;code&gt;docker ps&lt;/code&gt;  : Listar containers&lt;br /&gt;
+&lt;code&gt;docker exec [id do container] [comando]&lt;/code&gt; : Executa comandos no container&lt;/p&gt;
+&lt;p&gt;Mais comandos podem ser encontrados nesse &lt;a href=&quot;https://docs.docker.com/reference/commandline/cli/&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Instalando uma &amp;#8220;máquina&amp;#8221; e executando em 2 minutos&lt;/h2&gt;
+&lt;p&gt;Dois comandos, e o tempo gasto será apenas de download:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker pull nginx&lt;br /&gt;
+# docker run -d -p 80:80 nginx&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Pronto! Sua &amp;#8220;máquina&amp;#8221; estará funcionando.&lt;/p&gt;
+&lt;p&gt;O parâmetro &lt;strong&gt;-d&lt;/strong&gt; informa que a &amp;#8220;máquina&amp;#8221; será executada em background e o parâmetro &lt;strong&gt;-p&lt;/strong&gt; informa que toda requisição da porta 80 do hospedeiro X será redirecionada para a porta 80 da &amp;#8220;máquina&amp;#8221; que acabou de ser iniciada.&lt;/p&gt;
+&lt;h2&gt;Sem persistência&lt;/h2&gt;
+&lt;p&gt;Lembrando que as mudanças são apenas aplicadas no container, toda vez que desligar a &amp;#8220;máquina&amp;#8221;, na verdade você estará desmontando essa camada, e ao iniciar a &amp;#8220;máquina&amp;#8221; a partir de uma imagem será criado um novo container, ou seja, terás uma &amp;#8220;máquina&amp;#8221; &amp;#8220;novinha em folha&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;Para desligar um container em execução, use o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker stop &amp;lt;id do container&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Lembre-se que para obter o id do container, é necessário executar o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker ps&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;É possível reiniciar um container que foi &amp;#8220;desligado&amp;#8221;. Para isso usa-se o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# docker start &amp;lt;id do container&amp;gt;&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Obs: Lembrando que todos os dados de memória RAM serão perdidos, apenas os dados em disco serão armazenados e reutilizados na próxima execução.&lt;/p&gt;
+&lt;h2&gt;Acesso ao shell da &amp;#8220;máquina&amp;#8221;&lt;/h2&gt;
+&lt;p&gt;Após a &amp;#8220;máquina&amp;#8221; está em execução, é possível acessar o shell da &amp;#8220;máquina&amp;#8221; e executar procedimentos localmente. Para isso usa-se o comando abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker exec -it &amp;lt;id do container&amp;gt; bash&lt;br /&gt;
+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;O parâmetro &lt;strong&gt;-i&lt;/strong&gt; informa que esse comando será executado no modo interativo, e o parâmetro &lt;strong&gt;-t&lt;/strong&gt; informa que deverá ser alocado um pseudo-TTY, por fim o comando bash será executado na &amp;#8220;máquina&amp;#8221; e lhe dará acesso a  seu shell.&lt;/p&gt;
+&lt;p&gt;Por hoje é só. Aguardem novos artigos sobre Docker, pois falaremos sobre modificação de imagens, mapeamento de disco, criação de &amp;#8220;máquinas&amp;#8221; &amp;#8220;do zero&amp;#8221; e outras coisas interessantes sobre esse assunto.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Referência : &lt;/strong&gt;&lt;a href=&quot;https://docs.docker.com/reference/&quot; target=&quot;_blank&quot;&gt;https://docs.docker.com/reference/&lt;/a&gt;&lt;/p&gt;</description>
+	<pubDate>Tue, 24 Mar 2015 06:24:55 +0000</pubDate>
+</item>
+<item>
+	<title>Matheus Andrade: Git: Juntando vários Commits em um só usando SQUASH</title>
+	<guid>http://webcomfarinha.com/blog/?p=624</guid>
+	<link>http://webcomfarinha.com/blog/juntando-varios-commits-em-um-so-usando-git-squash/</link>
+	<description>&lt;p&gt;Hoje, deixo aqui uma dica bastante legal a ser utilizada no versionamento de seus códigos utilizando &lt;strong&gt;Git&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Situação&lt;/h2&gt;
+&lt;p&gt;Você está com o código de seu projeto organizado e versionado com &lt;strong&gt;Git&lt;/strong&gt;. Para desenvolvimento de novas funcionalidades, você adota a boa prática do uso de branches, assim como para correções de erros também &amp;#8211; bugfixes.&lt;/p&gt;
+&lt;p&gt;Adotando o fluxo recomendado em um versionamento Git, teríamos um ambiente semelhante a figura abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;aligncenter&quot; alt=&quot;pricipais branches no versionamento com Git&quot; src=&quot;http://git-scm.com/images/about/branches@2x.png&quot; width=&quot;350&quot; height=&quot;202&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;http://git-scm.com/images/about/branches@2x.png&lt;/p&gt;
+&lt;p&gt;&lt;span id=&quot;more-624&quot;&gt;&lt;/span&gt;Seu código em produção, funcional, testado, aprovado, estaria no &lt;strong&gt;branch master.&lt;/strong&gt; Para desenvolvimento, sempre teríamos um branch específico (neste caso chamado &lt;strong&gt;develop&lt;/strong&gt;), do qual criaríamos branches para cada funcionalidade, correção de bugs ou códigos adicionais. Assim, sempre ao término do desenvolvimento de um branch, faríamos um &lt;strong&gt;merge&lt;/strong&gt; com o &lt;strong&gt;develop&lt;/strong&gt;, resolveríamos os conflitos, faríamos testes e posteriormente jogaríamos o código pronto e funcional no branch principal (&lt;strong&gt;master&lt;/strong&gt;).&lt;/p&gt;
+&lt;p&gt;No fluxo normal de seu trabalho na correção de um bug no código vc seguirá (geralmente) as seguintes etapas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;criação de um branch bugfix a partir do branch develop.&lt;/li&gt;
+&lt;li&gt;desenvolvimento no branch bugfix de seu código para corrigir o erro.&lt;/li&gt;
+&lt;li&gt;merge/rebase dos branches develop e bugfix&lt;/li&gt;
+&lt;li&gt;rebase/merge no branch master com o branch develop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Problema&lt;/h2&gt;
+&lt;p&gt;Como convenção de versionamento adotada na sua equipe na correção de bugs, o código retificado (com a solução do problema) deve ir para produção (branch master) em um único commit. Contudo, você como bom desenvolvedor e versionador &lt;strong&gt;Git&lt;/strong&gt;, adota também a máxima &lt;strong&gt;&amp;#8220;Commit all the time&amp;#8221;&lt;/strong&gt; para proteger seu código garantindo bom versionamento.&lt;/p&gt;
+&lt;h2&gt;Como Fazer?&lt;/h2&gt;
+&lt;p&gt;Em seu desenvolvimento, não tenha medo ou preguiça de commitar. Em nosso caso, suponhamos que em seu branch bugfix vc realizou os seguintes commits:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span&gt;Commit #1: inserindo novos testes para correção do bug;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Commit #2: implementando lógica para que os testes funcionem;&lt;/li&gt;
+&lt;li&gt;Commit #3: mais implementações para que os testes funcionem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Você consegue resolver o bug apresentado em seu código. Quando olha o status de seu branch percebe que ele possui 03 commits. Mas, para o merge com o branch develop, precisa ir tudo em um commit único. Como fazer? Simples:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;$ git checkout develop&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;$ git merge &amp;#8212; squash bugfix&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Veja o status de seu branch develop. Perceba que o Git trouxe para você todos os commits realizados em seu branch bugfix, mas não realizou ainda o commit no develop. Ele pega todos os arquivos, aplica o merge, porém deixa-os na &lt;a href=&quot;http://git-scm.com/about/staging-area&quot;&gt;&lt;strong&gt;staging area &lt;/strong&gt;&lt;/a&gt;preparados para commit. Assim, basta você agora realizar um:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;$ git commit -m &amp;#8220;adicionando correcao do bug foo bla&amp;#8221; &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;que todos os commits do branch bugfix virarão um único commit no branch develop.&lt;/p&gt;
+&lt;p&gt;O squash é muito útil, pois o desenvolvedor precisa commitar o tempo todo em seu ambiente de desenvolvimento garantindo a segurança de seu código e para manter o branch master mais clean e fácil de visualização, pois neste caso, toda a correção do bug estaria representado na linha do tempo por um único commit.&lt;/p&gt;</description>
+	<pubDate>Sun, 20 Jan 2013 18:26:10 +0000</pubDate>
+</item>
+
+</channel>
+</rss>
