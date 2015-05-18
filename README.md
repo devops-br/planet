@@ -6,7 +6,7 @@ http://devops-br.org/
 
 Para adicionar seu site, basta enviar um pull request nesse repositório:
 
-https://gitlab.com/devops-br/planet
+https://github.com/devops-br/planet
 
 O arquivo a ser modificado é o "config.ini". Para adicionar seu blog, coloque a seguinte sintaxe:
 
