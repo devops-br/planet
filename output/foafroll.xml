@@ -26,12 +26,77 @@
 	</foaf:member>
 	<foaf:member>
 		<foaf:Agent>
+			<foaf:name>Guto Carvalho</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://gutocarvalho.net/octopress/">
+					<dc:title>Category: devops | gutocarvalho.net</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://gutocarvalho.net/octopress/categories/devops/atom.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
 			<foaf:name>Matheus Andrade</foaf:name>
 			<foaf:weblog>
 				<foaf:Document rdf:about="http://webcomfarinha.com/blog">
 					<dc:title>WEB COM FARINHA » Git</dc:title>
 					<rdfs:seeAlso>
 						<rss:channel rdf:about="http://webcomfarinha.com/blog/category/git-2/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Ricardo Martins</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://www.ricardomartins.com.br">
+					<dc:title>Ricardo Martins » Devops</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://www.ricardomartins.com.br/category/devops/feed/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Stefan Teixeira</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://stefanteixeira.com.br/">
+					<dc:title>devops - Stefan Teixeira</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://stefanteixeira.com.br/tag/devops/rss/" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Wagner Souza</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://wagnersza.github.io/feed.xml">
+					<dc:title>Wagner Souza</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://wagnersza.github.io/feed.xml" />
+					</rdfs:seeAlso>
+				</foaf:Document>
+			</foaf:weblog>
+		</foaf:Agent>
+	</foaf:member>
+	<foaf:member>
+		<foaf:Agent>
+			<foaf:name>Wellington Silva</foaf:name>
+			<foaf:weblog>
+				<foaf:Document rdf:about="http://dumpscerebrais.com.br">
+					<dc:title>Dumps Cerebrais</dc:title>
+					<rdfs:seeAlso>
+						<rss:channel rdf:about="http://dumpscerebrais.com.br/feed.xml" />
 					</rdfs:seeAlso>
 				</foaf:Document>
 			</foaf:weblog>
